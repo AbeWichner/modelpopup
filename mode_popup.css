@@ -1,0 +1,256 @@
+/* All rights reserved to Abdallah Alhabarneh https://www.gabarea.com */
+@import http://fonts.googleapis.com/css?family=Roboto;
+
+.pop-close-button{
+    position:absolute;
+
+    top:-2px;
+    cursor:pointer;
+    font-size:28px;
+    width:16px;
+    height:16px;
+    text-align:center;
+    z-index:10;
+    color: #AAAAAA;
+}
+
+.popup.left .pop-close-button{
+    right:10px;
+}
+
+.popup.right .pop-close-button{
+    left:10px;
+}
+
+.pop-close-button:hover{
+    color: #777777;
+}
+
+.popup.left .pop-container{
+    text-align: left;
+    direction: ltr;
+}
+
+.popup.right .pop-container{
+    text-align: right;
+    direction: rtl;
+}
+
+.popup{
+    display:none;
+    width:50%;
+    background:#FFF;
+    min-height:10%;
+    max-height:95%;
+    padding:0;
+    overflow-y:hidden;
+    overflow-x:hidden;
+    border:1px solid #EEE;
+    z-index:2002;
+
+    transition-duration:.5s;
+    box-shadow:1px 1px 5px #333;
+
+    opacity: 0;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+
+    /*-webkit-transition-duration:.5s;
+    -webkit-animation-duration:.5s;
+    -moz-animation-duration:.5s;
+    -o-animation-duration:.5s;
+    animation-duration:.5s;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both;
+    -webkit-animation-name:fadeInDown;
+    -moz-animation-name:fadeInDown;
+    -o-animation-name:fadeInDown;
+    animation-name:fadeInDown*/
+    animation: fadeInDown 0.5s both;
+}
+
+.animate-in{
+    animation: pop-in 300ms ease-in-out forwards;
+}
+
+@keyframes pop-in{
+    0%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+    85%{
+        transform: scale(1.3);
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.animate-out{
+    animation: pop-out 200ms ease-in-out forwards;
+}
+
+@keyframes pop-out{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0.1);
+        opacity: 0;
+    }
+}
+
+.popupimg{
+    display:none;
+    max-width:100%;
+    min-height:10%;
+    max-height:100%;
+    height:auto;
+    z-index:2002;
+    font-family:'Roboto',sans-serif;
+    opacity: 0;
+
+    background-color: #FFFFFF;
+
+    /*-webkit-transition-duration:.5s;
+    transition-duration:.5s;
+    -webkit-animation-duration:.5s;
+    -moz-animation-duration:.5s;
+    -o-animation-duration:.5s;
+    animation-duration:.5s;
+    -webkit-animation-fill-mode:both;
+    -moz-animation-fill-mode:both;
+    -o-animation-fill-mode:both;
+    animation-fill-mode:both;
+    -webkit-animation-name:fadeInDown;
+    -moz-animation-name:fadeInDown;
+    -o-animation-name:fadeInDown;
+    animation-name:fadeInDown*/
+    /*animation: fadeInDown 0.5s both;*/
+}
+
+.popdown{
+    -webkit-animation-name:fadeOutUp;
+    -moz-animation-name:fadeOutUp;
+    -o-animation-name:fadeOutUp;
+    animation-name:fadeOutUp
+}
+
+.popup img{
+    max-height:85%;
+    max-width:100%
+}
+
+.pop-title{
+    margin:0;
+    position:absolute;
+    top:0;
+    margin-bottom:5px;
+    width:100%;
+    border-bottom:1px solid #EEE;
+    padding:6px;
+    font-size:14px
+}
+
+.popup.left .pop-title{
+    left: 0;
+}
+
+.popup.right .pop-title{
+    right: 0;
+    direction: rtl;
+    text-align: right;
+}
+
+.popimg-title{
+    width:auto;
+    background-color:rgba(0,0,0,0.5);
+    text-shadow:1px 0 1px #000;
+    color:#FFF;
+    left:10px;
+    top:10px
+}
+
+.pop-container{
+    overflow-y: auto;
+    margin-top:34px;
+    font-size:16px;
+    padding:0 14px 14px
+}
+
+.pop-buttons{
+    
+    text-align:right;
+    padding: 7px 15px;
+    border-top: 1px solid #F0F0F0;
+}
+
+.pop-button{
+    white-space:nowrap;
+    max-height:25px;
+    padding:.1em .6em;
+    min-height:20px;
+    display:inline-block;
+    margin:0 .1em;
+    white-space:nowrap;
+    outline:none;
+    font-size:14px;
+    cursor:pointer
+}
+
+.pop-button:hover{
+    white-space:nowrap;
+    max-height:25px;
+    padding:.1em .6em;
+    min-height:20px;
+    display:inline-block;
+    margin:0 .1em;
+    white-space:nowrap;
+    outline:none;
+    font-size:14px;
+    cursor:pointer
+}
+
+.pop-button-default
+{
+    white-space:nowrap;
+    color:#000;
+    background:#eee;
+    border-style:solid;
+    border-color:#ccc #aaa #888 #bbb;
+    padding:.1em .6em;
+    border:1px solid #ccc;
+    background-color:#f7f7f7;
+    color:#333;
+    -moz-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    -webkit-box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    box-shadow:0 1px 0 rgba(0,0,0,0.2),0 0 0 2px #fff inset;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    display:inline-block;
+    margin:0 .1em;
+    text-shadow:0 1px 0 #fff;
+    line-height:1.4;
+    white-space:nowrap;
+    outline:none;
+    font-size:14px;
+    cursor:pointer
+}
+
+.backLayout{
+    display:none;
+    width:100%;
+    height:100%;
+    position:fixed;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    background-color: rgba(10, 0, 0, 0.701961);
+    z-index:2001
+}
